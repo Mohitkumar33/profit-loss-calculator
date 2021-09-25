@@ -17,9 +17,9 @@ function calculate() {
       output.style.display = "block";
       output.innerText =
         "Your profit is " +
-        profit * quantity +
+        (profit * quantity).toPrecision(2) +
         " and the profit percentage is " +
-        profitPercentage +
+        profitPercentage.toPrecision(2) +
         "🎉✨";
       output.style.color = "green";
     } else if (buyPrice > current) {
@@ -27,10 +27,10 @@ function calculate() {
       var lossPercentage = (loss * 100) / buyPrice;
       output.style.display = "block";
       output.innerText =
-        "Your loss is" +
-        loss * quantity +
+        "Your loss is " +
+        (loss * quantity).toPrecision(2) +
         " and the loss percentage is " +
-        lossPercentage +
+        lossPercentage.toPrecision(2) +
         "😐";
       output.style.color = "red";
     } else {
