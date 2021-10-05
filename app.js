@@ -17,9 +17,9 @@ function calculate() {
       output.style.display = "block";
       output.innerText =
         "Your profit is " +
-        (profit * quantity).toPrecision(2) +
+        (profit * quantity).toFixed(2) +
         " and the profit percentage is " +
-        profitPercentage.toPrecision(2) +
+        profitPercentage.toFixed(2) +
         "🎉✨";
       output.style.color = "green";
     } else if (buyPrice > current) {
@@ -28,9 +28,9 @@ function calculate() {
       output.style.display = "block";
       output.innerText =
         "Your loss is " +
-        (loss * quantity).toPrecision(2) +
+        (loss * quantity).toFixed(2) +
         " and the loss percentage is " +
-        lossPercentage.toPrecision(2) +
+        lossPercentage.toFixed(2) +
         "😐";
       output.style.color = "red";
     } else {
